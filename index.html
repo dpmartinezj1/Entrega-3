@@ -1,12 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantastic Mr Fox</title>
-    <link rel="stylesheet" href="estilos/estilo.css">
+    <title>Fantastic Mr. Fox - Recorrido Virtual</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+    <header>
+        <h3>FANTASTIC MR. FOX</h3>
+        <p>RECORRIDO VIRTUAL</p>
+    </header>
+
+    <main>
+
+        <section class="portada">
+
+            <div class="texto-portada">
+
+                <p class="numero">00 / INICIO</p>
+
+                <h1>
+                    FANTASTIC<br>
+                    MR. FOX
+                </h1>
+
+                <p>
+                    Un recorrido virtual por algunos de los espacios más
+                    importantes de la película.
+                </p>
+
+                <a class="boton" href="casa.html">
+                    COMENZAR RECORRIDO →
+                </a>
+
+            </div>
+
+            <div class="imagen-portada">
+                <img src="img/portada.jpg"
+                     alt="Fantastic Mr Fox">
+            </div>
+
+        </section>
+
+
+        <section class="mapa">
+
+            <h2>MAPA DEL RECORRIDO</h2>
+
+            <p>
+                Puedes seguir el recorrido en orden o entrar directamente
+                al espacio que quieras explorar.
+            </p>
+
+            <div class="lugares">
+
+                <a href="casa.html">
+                    <span>01</span>
+                    <h3>Casa del árbol</h3>
+                    <p>El inicio de la historia.</p>
+                </a>
+
+                <a href="granjas.html">
+                    <span>02</span>
+                    <h3>Las granjas</h3>
+                    <p>Boggis, Bunce y Bean.</p>
+                </a>
+
+                <a href="tuneles.html">
+                    <span>03</span>
+                    <h3>Los túneles</h3>
+                    <p>El mundo bajo tierra.</p>
+                </a>
+
+                <a href="refugio.html">
+                    <span>04</span>
+                    <h3>El refugio</h3>
+                    <p>Los animales se reúnen.</p>
+                </a>
+
+                <a href="supermercado.html">
+                    <span>05</span>
+                    <h3>Supermercado</h3>
+                    <p>El final del recorrido.</p>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section class="audio">
+
+            <h2>AMBIENTE</h2>
+
+            <p>
+                Puedes escuchar este audio mientras recorres el sitio.
+            </p>
+
+            <audio controls loop>
+                <source src="audio/ambiente.mp3"
+                        type="audio/mpeg">
+
+                Tu navegador no soporta audio.
+            </audio>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        Entrega 3 · Recorrido Virtual · Fantastic Mr. Fox
+    </footer>
+
 </body>
+
 </html>
