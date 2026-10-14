@@ -1,133 +1,81 @@
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Los túneles</title>
-
-    <link rel="stylesheet"
-          href="css/style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los túneles — FOX.FILES</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
-
-
-<body class="oscuro">
-
-<header>
-
-    <a class="home"
-       href="index.html">
-
-        ← HOME
-
-    </a>
-
-    <h3>
-        FANTASTIC MR. FOX
-    </h3>
-
+<body>
+<header class="navbar">
+    <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
+    <nav>
+        <a href="index.html">Inicio</a><a href="casa.html">La casa</a>
+        <a href="granjas.html">Las granjas</a><a href="refugio.html">El refugio</a>
+        <a href="supermercado.html">El súper</a>
+        <a href="tuneles.html" class="activo">Los túneles</a>
+    </nav>
+    <button class="boton-sonido" id="botonSonido">♫ ACTIVAR SONIDO</button>
 </header>
+<audio id="musica" src="audio/ambiente.mp3" loop></audio>
 
+<main class="pagina-espacio">
+    <section class="cabecera-espacio">
+        <div>
+            <p class="etiqueta">ESPACIO 05 / LA ESCAPATORIA</p>
+            <h1>PERDERSE<br>PARA ESCAPAR.</h1>
+            <p class="descripcion">
+                Un laberinto de rutas alternativas, giros inesperados
+                y decisiones rápidas. Aquí la creatividad abre caminos.
+            </p>
+            <a href="#contenido" class="boton-principal">ENTRAR AL LABERINTO ↘</a>
+        </div>
+        <div class="imagen-espacio marco">
+            <img src="img/tuneles.jpg" alt="Los túneles subterráneos">
+        </div>
+    </section>
 
-<main>
-
-<section class="espacio">
-
-    <div class="texto">
-
-        <p class="numero">
-            03 / 05
-        </p>
-
-        <h1>
-            LOS<br>
-            TÚNELES
-        </h1>
-
+    <section id="contenido" class="texto-espacio">
+        <p class="etiqueta">DENTRO DE LA HISTORIA</p>
         <p>
-            Los animales comienzan a vivir bajo tierra
-            mientras los granjeros intentan atraparlos.
+            Los túneles conectan distintos lugares y permiten a los
+            animales encontrar rutas para escapar. Representan la
+            imaginación y la capacidad de resolver problemas cuando
+            las opciones parecen agotarse.
         </p>
-
+        <blockquote class="cita">
+            A veces, la mejor salida es encontrar un camino nuevo.
+        </blockquote>
         <p>
-            En esta parte del recorrido la navegación
-            también cambia. Ya no existe un único camino.
-            Puedes decidir hacia dónde continuar.
+            En este recorrido virtual, los túneles también representan
+            la navegación entre páginas. Puedes explorar libremente,
+            avanzar al siguiente lugar o regresar al inicio cuando
+            quieras.
         </p>
+        <div class="nota">
+            <strong>ÚLTIMA PISTA ✳</strong>
+            Has llegado al último espacio. Toca las letras para activar
+            el audio y después vuelve al inicio para elegir otra ruta.
+        </div>
+        <p class="etiqueta">ACTIVA LAS LETRAS</p>
+        <div class="letras-interactivas">
+            <button type="button">R</button><button type="button">U</button>
+            <button type="button">T</button><button type="button">A</button>
+        </div>
+    </section>
 
-    </div>
-
-
-    <div class="imagen-espacio">
-
-        <img src="img/tuneles.jpg"
-             alt="Túneles Fantastic Mr Fox">
-
-    </div>
-
-</section>
-
-
-<section class="caminos">
-
-    <h2>
-        ELIGE UN CAMINO
-    </h2>
-
-
-    <div class="opciones-camino">
-
-        <a href="granjas.html">
-
-            ← VOLVER A LAS GRANJAS
-
-        </a>
-
-
-        <a href="refugio.html">
-
-            SEGUIR EXCAVANDO ↓
-
-        </a>
-
-
-        <a href="index.html">
-
-            SALIDA AL HOME ↑
-
-        </a>
-
-    </div>
-
-</section>
-
-
+    <nav class="navegacion-espacios">
+        <a href="supermercado.html">← El supermercado</a>
+        <a href="index.html">⌂ Volver al inicio</a>
+    </nav>
 </main>
 
-
-<nav class="navegacion">
-
-    <a href="granjas.html">
-        ← GRANJAS
-    </a>
-
-    <a href="index.html">
-        HOME
-    </a>
-
-    <a href="refugio.html">
-        REFUGIO →
-    </a>
-
-</nav>
-
-
+<footer class="pie">
+    <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
+    <p>Espacio 05 / Los túneles</p>
+    <a href="index.html">VOLVER A CASA ↑</a>
+</footer>
+<script src="js/interacciones.js"></script>
 </body>
-
 </html>
+

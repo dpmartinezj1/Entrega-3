@@ -1,123 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantastic Mr. Fox - Recorrido Virtual</title>
-
-    <link rel="stylesheet" href="css/style.css">
+    <title>FOX.FILES — Fantastic Mr. Fox</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
+    <header class="navbar">
+        <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
 
-    <header>
-        <h3>FANTASTIC MR. FOX</h3>
-        <p>RECORRIDO VIRTUAL</p>
+        <nav>
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="casa.html">La casa</a>
+            <a href="granjas.html">Las granjas</a>
+            <a href="refugio.html">El refugio</a>
+            <a href="supermercado.html">El súper</a>
+            <a href="tuneles.html">Los túneles</a>
+        </nav>
+
+        <button class="boton-sonido" id="botonSonido">
+            ♫ ACTIVAR SONIDO
+        </button>
     </header>
 
+    <audio id="musica" src="audio/ambiente.mp3" loop></audio>
+
     <main>
-
         <section class="portada">
+            <div class="portada-texto">
+                <p class="etiqueta">UN RECORRIDO POR EL UNIVERSO DE WES ANDERSON</p>
 
-            <div class="texto-portada">
-
-                <p class="numero">00 / INICIO</p>
-
-                <h1>
-                    FANTASTIC<br>
-                    MR. FOX
+                <h1 class="titulo-gigante">
+                    <span class="letra">F</span><span class="letra">A</span><span class="letra">N</span><span class="letra">T</span><span class="letra">A</span><span class="letra">S</span><span class="letra">T</span><span class="letra">I</span><span class="letra">C</span>
+                    <br>
+                    <span class="segunda-linea">MR. FOX</span>
                 </h1>
 
-                <p>
-                    Un recorrido virtual por algunos de los espacios más
-                    importantes de la película.
+                <p class="descripcion">
+                    Un mundo de zorros elegantes, planes imposibles y aventuras
+                    bajo tierra. Explora los lugares, descubre sus secretos y
+                    encuentra tu propio camino.
                 </p>
 
-                <a class="boton" href="casa.html">
-                    COMENZAR RECORRIDO →
+                <a href="#espacios" class="boton-principal">
+                    EXPLORAR EL UNIVERSO ↘
                 </a>
 
+                <p class="instruccion">
+                    Psst... toca las letras del título.
+                </p>
             </div>
 
-            <div class="imagen-portada">
-                <img src="img/portada.jpg"
-                     alt="Fantastic Mr Fox">
+            <div class="portada-imagen marco">
+                <img src="img/portada.jpg" alt="Portada del recorrido Fantastic Mr. Fox">
+                <span class="sello">EDICIÓN<br>ESPECIAL Nº 01</span>
+                <span class="texto-imagen">WELCOME TO THE FOX WORLD</span>
             </div>
-
         </section>
 
+        <div class="franja">
+            ★ CORRE ★ ESCÓNDETE ★ COMPARTE ★ VUELVE A EMPEZAR ★
+            CORRE ★ ESCÓNDETE ★ COMPARTE ★
+        </div>
 
-        <section class="mapa">
+        <section id="espacios" class="seccion-espacios">
+            <div class="encabezado-seccion">
+                <div>
+                    <p class="etiqueta">EL MAPA</p>
+                    <h2>¿Por dónde<br>empezamos?</h2>
+                </div>
 
-            <h2>MAPA DEL RECORRIDO</h2>
+                <p class="texto-lateral">
+                    Seis espacios conectados. Cinco lugares por descubrir
+                    y una entrada a este pequeño universo cinematográfico.
+                </p>
+            </div>
 
+            <div class="rejilla">
+                <a href="casa.html" class="tarjeta">
+                    <div class="tarjeta-imagen">
+                        <img src="img/casa.jpg" alt="La casa de los Fox">
+                        <span class="numero">01</span>
+                    </div>
+                    <div class="tarjeta-contenido">
+                        <p class="etiqueta">EL HOGAR</p>
+                        <h3>La casa</h3>
+                        <p>Familia, secretos y una vida que nunca es tan tranquila.</p>
+                        <span class="enlace-tarjeta">ENTRAR ↗</span>
+                    </div>
+                </a>
+
+                <a href="granjas.html" class="tarjeta">
+                    <div class="tarjeta-imagen">
+                        <img src="img/granjas.jpg" alt="Las granjas de los antagonistas">
+                        <span class="numero">02</span>
+                    </div>
+                    <div class="tarjeta-contenido">
+                        <p class="etiqueta">EL CONFLICTO</p>
+                        <h3>Las granjas</h3>
+                        <p>Tres granjeros, una obsesión y un plan muy salvaje.</p>
+                        <span class="enlace-tarjeta">ENTRAR ↗</span>
+                    </div>
+                </a>
+
+                <a href="refugio.html" class="tarjeta">
+                    <div class="tarjeta-imagen">
+                        <img src="img/refugio.jpg" alt="El refugio subterráneo">
+                        <span class="numero">03</span>
+                    </div>
+                    <div class="tarjeta-contenido">
+                        <p class="etiqueta">LA COMUNIDAD</p>
+                        <h3>El refugio</h3>
+                        <p>Cuando todo se complica, sobrevivir es un trabajo en equipo.</p>
+                        <span class="enlace-tarjeta">ENTRAR ↗</span>
+                    </div>
+                </a>
+
+                <a href="supermercado.html" class="tarjeta">
+                    <div class="tarjeta-imagen">
+                        <img src="img/supermercado.jpg" alt="El supermercado">
+                        <span class="numero">04</span>
+                    </div>
+                    <div class="tarjeta-contenido">
+                        <p class="etiqueta">LA TENTACIÓN</p>
+                        <h3>El supermercado</h3>
+                        <p>Comida, recursos y oportunidades para una misión secreta.</p>
+                        <span class="enlace-tarjeta">ENTRAR ↗</span>
+                    </div>
+                </a>
+
+                <a href="tuneles.html" class="tarjeta">
+                    <div class="tarjeta-imagen">
+                        <img src="img/tuneles.jpg" alt="Los túneles subterráneos">
+                        <span class="numero">05</span>
+                    </div>
+                    <div class="tarjeta-contenido">
+                        <p class="etiqueta">LA ESCAPATORIA</p>
+                        <h3>Los túneles</h3>
+                        <p>Rutas inesperadas para escapar y empezar de nuevo.</p>
+                        <span class="enlace-tarjeta">ENTRAR ↗</span>
+                    </div>
+                </a>
+
+                <div class="tarjeta tarjeta-final">
+                    <span class="estrella">✳</span>
+                    <p class="etiqueta">TU MISIÓN</p>
+                    <h3>Explora<br>sin perderte.</h3>
+                    <p>Todos los caminos te permiten volver al inicio.</p>
+                    <a href="index.html" class="enlace-tarjeta">VOLVER A CASA ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="frase-final">
+            <p class="etiqueta">UNA PEQUEÑA REFLEXIÓN</p>
+            <h2>Ser diferente también<br>es parte de la aventura.</h2>
             <p>
-                Puedes seguir el recorrido en orden o entrar directamente
-                al espacio que quieras explorar.
+                Un recorrido por la identidad, la familia, la rebeldía
+                y el poder de encontrar nuestro propio camino.
             </p>
-
-            <div class="lugares">
-
-                <a href="casa.html">
-                    <span>01</span>
-                    <h3>Casa del árbol</h3>
-                    <p>El inicio de la historia.</p>
-                </a>
-
-                <a href="granjas.html">
-                    <span>02</span>
-                    <h3>Las granjas</h3>
-                    <p>Boggis, Bunce y Bean.</p>
-                </a>
-
-                <a href="tuneles.html">
-                    <span>03</span>
-                    <h3>Los túneles</h3>
-                    <p>El mundo bajo tierra.</p>
-                </a>
-
-                <a href="refugio.html">
-                    <span>04</span>
-                    <h3>El refugio</h3>
-                    <p>Los animales se reúnen.</p>
-                </a>
-
-                <a href="supermercado.html">
-                    <span>05</span>
-                    <h3>Supermercado</h3>
-                    <p>El final del recorrido.</p>
-                </a>
-
-            </div>
-
         </section>
-
-
-        <section class="audio">
-
-            <h2>AMBIENTE</h2>
-
-            <p>
-                Puedes escuchar este audio mientras recorres el sitio.
-            </p>
-
-            <audio controls loop>
-                <source src="audio/ambiente.mp3"
-                        type="audio/mpeg">
-
-                Tu navegador no soporta audio.
-            </audio>
-
-        </section>
-
     </main>
 
-
-    <footer>
-        Entrega 3 · Recorrido Virtual · Fantastic Mr. Fox
+    <footer class="pie">
+        <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
+        <p>Recorrido virtual inspirado en Fantastic Mr. Fox · 2009</p>
+        <a href="#espacios">VOLVER ARRIBA ↑</a>
     </footer>
 
+    <script src="js/interacciones.js"></script>
 </body>
-
 </html>
