@@ -1,132 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fantastic Mr. Fox | Recorrido virtual</title>
-  <link rel="stylesheet" href="css/estilo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fantastic Mr. Fox | Recorrido virtual</title>
+<link rel="stylesheet" href="css/estilo.css">
 </head>
 <body data-espacio="inicio">
-
 <header class="navbar">
-  <a class="logo" href="index.html">FANTASTIC<span>!</span></a>
-  <nav>
-    <a class="activo" href="index.html">Inicio</a>
-    <a href="casa.html">La casa</a>
-    <a href="granjas.html">Las granjas</a>
-    <a href="refugio.html">El refugio</a>
-    <a href="tuneles.html">Los túneles</a>
-    <a href="supermercado.html">El supermercado</a>
-  </nav>
+<a class="logo" href="index.html">FANTASTIC<span>!</span></a>
+<nav>
+ <a class="activo" href="index.html">Inicio</a>
+ <a href="casa.html">La casa</a>
+ <a href="granjas.html">Las granjas</a>
+ <a href="refugio.html">El refugio</a>
+ <a href="tuneles.html">Los túneles</a>
+ <a href="supermercado.html">El supermercado</a>
+</nav>
 </header>
-
 <section class="reproductor">
-  <span>♫ BANDA SONORA</span>
-  <select id="selectorCancion">
-    <option value="audio/ambiente.mp3">Ambiente general</option>
-    <option value="audio/casa.mp3">La casa</option>
-    <option value="audio/granjas.mp3">Las granjas</option>
-    <option value="audio/tuneles.mp3">Los túneles</option>
-    <option value="audio/supermercado.mp3">El supermercado</option>
-  </select>
-  <button id="botonSonido" class="boton-sonido">♫ REPRODUCIR</button>
+<span>♫ BANDA SONORA</span>
+<select id="selectorCancion">
+ <option value="audio/ambiente.mp3">Ambiente general</option>
+ <option value="audio/casa.mp3">La casa</option>
+ <option value="audio/granjas.mp3">Las granjas</option>
+ <option value="audio/tuneles.mp3">Los túneles</option>
+ <option value="audio/supermercado.mp3">El supermercado</option>
+</select>
+<button id="botonSonido" class="boton-sonido">♫ REPRODUCIR</button>
 </section>
-
-<audio id="musica" preload="none" loop></audio>
-
+<audio id="musica" preload="auto" loop></audio>
 <main>
-  <section class="hero">
-    <div>
-      <p class="etiqueta">UN RECORRIDO POR EL UNIVERSO DE WES ANDERSON</p>
-      <h1>FANTASTIC<br><span class="acento">MR. FOX</span><span class="punto">.</span></h1>
-      <p class="hero-texto">
-        Un zorro, tres granjeros y un mundo donde la aventura
-        se esconde bajo tierra.
-      </p>
-      <a class="boton-principal" href="casa.html">
-        COMENZAR EL RECORRIDO ↗
-      </a>
-    </div>
-
-    <div class="marco">
-      <img src="img/portada.jpg" alt="Portada de Fantastic Mr. Fox">
-    </div>
-
-    <p class="hero-index">UNIVERSO CINEMATOGRÁFICO / 2009</p>
-  </section>
-
-  <section class="section-wrap">
-    <p class="etiqueta">EL CONCEPTO</p>
-    <h2>Un mundo pequeño.<br><span class="acento">Una gran aventura.</span></h2>
-    <p class="intro-text">
-      Explora los espacios de Fantastic Mr. Fox, descubre a sus personajes
-      y recorre los escenarios que construyen esta historia.
-      Cada lugar tiene algo que contar y una ruta diferente por descubrir.
-    </p>
-  </section>
-
-  <section class="section-wrap" id="mapa">
-    <div class="section-heading">
-      <div>
-        <p class="etiqueta">ELIGE TU CAMINO</p>
-        <h2>Mapa de espacios<span class="acento">.</span></h2>
-      </div>
-      <span>05 ESPACIOS</span>
-    </div>
-
-    <div class="cards">
-      <a class="card" href="casa.html">
-        <img src="img/casa.jpg" alt="La casa">
-        <small>01 / HOGAR</small>
-        <h3>La casa ↗</h3>
-      </a>
-
-      <a class="card" href="granjas.html">
-        <img src="img/granjas.jpg" alt="Las granjas">
-        <small>02 / CONFLICTO</small>
-        <h3>Las granjas ↗</h3>
-      </a>
-
-      <a class="card" href="refugio.html">
-        <img src="img/refugio.jpg" alt="El refugio">
-        <small>03 / COMUNIDAD</small>
-        <h3>El refugio ↗</h3>
-      </a>
-
-      <a class="card" href="tuneles.html">
-        <img src="img/tuneles.jpg" alt="Los túneles">
-        <small>04 / ESCAPATORIA</small>
-        <h3>Los túneles ↗</h3>
-      </a>
-
-      <a class="card" href="supermercado.html">
-        <img src="img/supermercado.jpg" alt="El supermercado">
-        <small>05 / ABUNDANCIA</small>
-        <h3>El supermercado ↗</h3>
-      </a>
-    </div>
-  </section>
-
-  <section class="letras-area">
-    <p class="etiqueta">EXPERIMENTA</p>
-    <h2>TOCA. CAMBIA.<br>ESCUCHA.</h2>
-    <p>Pulsa las letras para cambiar sus colores y activar la música.</p>
-    <div class="letras-interactivas">
-      <button>F</button>
-      <button>O</button>
-      <button>X</button>
-      <button>!</button>
-    </div>
-  </section>
+<section class="hero">
+ <div>
+ <p class="etiqueta">UN RECORRIDO POR EL UNIVERSO DE WES ANDERSON</p>
+ <h1>FANTASTIC<br><span class="acento">MR. FOX</span><span class="punto">.</span></h1>
+ <p class="hero-texto">
+ Un zorro, tres granjeros y un mundo donde la aventura se esconde bajo tierra.
+ </p>
+ <a class="boton-principal" href="casa.html">
+ COMENZAR EL RECORRIDO ↗
+ </a>
+ </div>
+ <div class="marco">
+ <img src="img/portada.jpg" alt="Portada de Fantastic Mr. Fox">
+ </div>
+ <p class="hero-index">UNIVERSO CINEMATOGRÁFICO / 2009</p>
+</section>
+<section class="section-wrap">
+ <p class="etiqueta">EL CONCEPTO</p>
+ <h2>Un mundo pequeño.<br><span class="acento">Una gran aventura.</span></h2>
+ <p class="intro-text">
+ Explora los espacios de Fantastic Mr. Fox, descubre a sus personajes
+ y recorre los escenarios que construyen esta historia.
+ Cada lugar tiene algo que contar y una ruta diferente por descubrir.
+ </p>
+</section>
+<section class="section-wrap" id="mapa">
+ <div class="section-heading">
+ <div>
+ <p class="etiqueta">ELIGE TU CAMINO</p>
+ <h2>Mapa de espacios<span class="acento">.</span></h2>
+ </div>
+ <span>05 ESPACIOS</span>
+ </div>
+ <div class="cards">
+ <a class="card" href="casa.html">
+ <img src="img/casa.jpg" alt="La casa">
+ <small>01 / HOGAR</small>
+ <h3>La casa ↗</h3>
+ </a>
+ <a class="card" href="granjas.html">
+ <img src="img/granjas.jpg" alt="Las granjas">
+ <small>02 / CONFLICTO</small>
+ <h3>Las granjas ↗</h3>
+ </a>
+ <a class="card" href="refugio.html">
+ <img src="img/refugio.jpg" alt="El refugio">
+ <small>03 / COMUNIDAD</small>
+ <h3>El refugio ↗</h3>
+ </a>
+ <a class="card" href="tuneles.html">
+ <img src="img/tuneles.jpg" alt="Los túneles">
+ <small>04 / ESCAPATORIA</small>
+ <h3>Los túneles ↗</h3>
+ </a>
+ <a class="card" href="supermercado.html">
+ <img src="img/supermercado.jpg" alt="El supermercado">
+ <small>05 / ABUNDANCIA</small>
+ <h3>El supermercado ↗</h3>
+ </a>
+ </div>
+</section>
+<section class="letras-area">
+ <p class="etiqueta">EXPERIMENTA</p>
+ <h2>TOCA. CAMBIA.<br>ESCUCHA.</h2>
+ <p>Pulsa las letras para cambiar sus colores y activar la música.</p>
+ <div class="letras-interactivas">
+ <button>F</button><button>O</button><button>X</button><button>!</button>
+</div>
+</section>
 </main>
-
 <footer class="pie">
-  <p>Un recorrido por el universo de <em>Fantastic Mr. Fox</em>.</p>
-  <a href="documentos.md">DOCUMENTACIÓN DEL PROYECTO ↗</a>
-  <a href="index.html">VOLVER AL INICIO ↑</a>
+<p>Un recorrido por el universo de <em>Fantastic Mr. Fox</em>.</p>
+<a href="documentos.md">DOCUMENTACIÓN DEL PROYECTO ↗</a>
+<a href="index.html">VOLVER AL INICIO ↑</a>
 </footer>
-
 <script src="interacciones.js"></script>
 </body>
 </html>
-

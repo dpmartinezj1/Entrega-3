@@ -119,11 +119,12 @@ select {
   background: var(--negro);
 }
 
+/* ---------- INICIO ---------- */
 .hero {
-  padding: 70px 7% 35px;
+  padding: 60px 5% 35px;
   display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  gap: 35px;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 40px;
   align-items: center;
 }
 
@@ -136,7 +137,7 @@ select {
 }
 
 .hero h1 {
-  font: 800 clamp(4rem, 9vw, 8.5rem)/.82 "Syne", sans-serif;
+  font: 800 clamp(4rem, 8vw, 7.5rem)/.82 "Syne", sans-serif;
   letter-spacing: -.085em;
   margin: 25px 0;
 }
@@ -170,8 +171,20 @@ select {
   box-shadow: 8px 8px 0 var(--negro);
 }
 
+/* La foto es clicable: activa la música */
+.marco {
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+}
+
+.marco:active {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0 var(--negro);
+}
+
+/* Imagen grande de portada */
 .hero .marco img {
-  aspect-ratio: 4 / 4.6;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
 }
 
@@ -207,19 +220,24 @@ select {
   margin-bottom: 28px;
 }
 
+/* Tarjetas más grandes: 2 columnas, la última ocupa todo el ancho */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
 }
 
 .card {
   display: block;
   min-width: 0;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid var(--negro);
   background: var(--papel);
   transition: transform .2s, box-shadow .2s;
+}
+
+.card:last-child {
+  grid-column: 1 / -1;
 }
 
 .card:hover {
@@ -228,9 +246,13 @@ select {
 }
 
 .card img {
-  aspect-ratio: 1.2;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   background: #d4c6a9;
+}
+
+.card:last-child img {
+  aspect-ratio: 21 / 9;
 }
 
 .card small {
@@ -245,6 +267,7 @@ select {
   margin: 8px 0 12px;
 }
 
+/* ---------- LETRAS INTERACTIVAS ---------- */
 .letras-area {
   text-align: center;
   background: var(--mostaza);
@@ -271,33 +294,60 @@ select {
   color: var(--negro);
   font: 800 2.5rem "Syne", sans-serif;
   cursor: pointer;
-  transition: transform .15s, color .2s;
+  transition: transform .15s, color .4s ease;
 }
 
 .letras-interactivas button:hover {
   transform: rotate(-5deg) scale(1.08);
 }
 
+/* Movimiento sutil al tocar una letra */
+.letras-interactivas button.mueve,
+.letra-titulo.mueve {
+  animation: movimientoSutil .6s ease-in-out;
+}
+
+@keyframes movimientoSutil {
+  0%   { transform: translateY(0) rotate(0deg); }
+  30%  { transform: translateY(-6px) rotate(-3deg); }
+  65%  { transform: translateY(1px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Letras de los títulos (se separan con JavaScript) */
+.palabra-titulo {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.letra-titulo {
+  display: inline-block;
+  transition: color .4s ease;
+  cursor: default;
+}
+
+/* ---------- PÁGINAS DE ESPACIOS ---------- */
 .pagina-espacio {
   padding-top: 35px;
 }
 
 .cabecera-espacio {
-  padding: 35px 7% 65px;
+  padding: 35px 5% 65px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: .9fr 1.1fr;
   align-items: center;
   gap: 45px;
 }
 
 .cabecera-espacio h1 {
-  font: 800 clamp(3.2rem, 6.5vw, 6.4rem)/.9 "Syne", sans-serif;
+  font: 800 clamp(3.2rem, 6vw, 5.8rem)/.9 "Syne", sans-serif;
   letter-spacing: -.075em;
   margin: 24px 0;
 }
 
+/* Imagen grande en cada espacio */
 .cabecera-espacio .marco img {
-  aspect-ratio: 4 / 3.5;
+  aspect-ratio: 1 / .9;
   object-fit: cover;
 }
 
@@ -352,8 +402,7 @@ select {
   color: var(--naranja);
 }
 
-/* VIDEO DE LAS GRANJAS */
-
+/* ---------- VIDEO DE LAS GRANJAS ---------- */
 .video-seccion {
   max-width: 1000px;
   margin: 0 auto 55px;
@@ -424,8 +473,7 @@ select {
   margin-bottom: 0;
 }
 
-/* PIE DE PÁGINA SIN FOX.FILES */
-
+/* ---------- PIE DE PÁGINA ---------- */
 .pie {
   display: flex;
   align-items: center;
@@ -450,8 +498,7 @@ select {
   color: var(--naranja);
 }
 
-/* DISEÑO PARA TABLET Y CELULAR */
-
+/* ---------- TABLET Y CELULAR ---------- */
 @media (max-width: 900px) {
   .hero,
   .cabecera-espacio {
@@ -460,10 +507,6 @@ select {
 
   .hero {
     padding-top: 45px;
-  }
-
-  .cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -492,6 +535,10 @@ select {
   .cards,
   .granjeros-grid {
     grid-template-columns: 1fr;
+  }
+
+  .card:last-child img {
+    aspect-ratio: 4 / 3;
   }
 
   .section-heading {
@@ -526,5 +573,13 @@ select {
   .pie {
     align-items: flex-start;
     flex-direction: column;
+  }
+}
+
+/* Respeta a quien prefiere menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  .letras-interactivas button.mueve,
+  .letra-titulo.mueve {
+    animation: none;
   }
 }
