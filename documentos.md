@@ -1,93 +1,30 @@
 # Recorrido virtual: Fantastic Mr. Fox
 
-## 1. Concepto
+## 1. Concepto y Justificación
+El proyecto propone un recorrido virtual interactivo inspirado en la película *Fantastic Mr. Fox* (2009), dirigida por Wes Anderson. La experiencia permite explorar los escenarios clave de la historia mediante una estructura editorial que combina tipografías llamativas, paletas de colores terrosas, imágenes, hipervínculos, un vídeo explicativo y elementos sonoros interactivos activados al hacer clic en las imágenes de cada sección.
 
-El proyecto propone un recorrido virtual inspirado en la película
-*Fantastic Mr. Fox* (2009), dirigida por Wes Anderson.
+## 2. Objetivos del Proyecto
+* **Inmersión:** Trasladar la estética visual y narrativa única del universo de Wes Anderson a la web.
+* **Interactividad y Control:** Permitir al usuario elegir su propia ruta de navegación entre los diferentes espacios (inicio, casa, granjas, refugio, túneles y supermercado) y activar la música ambiental directamente al interactuar con las imágenes principales.
 
-La experiencia permite explorar los escenarios de la historia mediante
-imágenes, textos, hipervínculos, música y un video explicativo.
+## 3. Organización del Recorrido
+* **Inicio:** Presentación de la película, acceso a la portada principal (con un tamaño optimizado y destacado) y mapa de navegación de los 5 espacios.
+* **Espacio 01 (La casa):** Foco en el hogar, la familia y la identidad del protagonista.
+* **Espacio 02 (Las granjas):** El conflicto con Boggis, Bunce y Bean, acompañado de un archivo audiovisual en vídeo.
+* **Espacio 03 (El refugio):** La cooperación y supervivencia bajo tierra, configurado con su pista de audio correspondiente (`refugio.mp3`).
+* **Espacio 04 (Los túneles):** Rutas de escape y agilidad mental.
+* **Espacio 05 (El supermercado):** Meta final del recorrido que representa la abundancia.
 
-## 2. Objetivo
+## 4. Decisiones de Diseño y Estética Visual
+Se implementó una tipografía estructurada con **Syne** para titulares, **Space Grotesk** para párrafos y **DM Mono** para etiquetas técnicas. La paleta de colores rescata tonos cálidos característicos del filme (crema, papel, naranja, mostaza y verde oliva). Se eliminó el reproductor estático superior para priorizar una interfaz limpia donde la música se controla orgánicamente mediante las imágenes.
 
-Crear una experiencia interactiva que conecte los espacios de la película
-y permita al usuario elegir su propia ruta. Todas las páginas ofrecen
-una forma de volver al inicio.
-
-## 3. Organización del recorrido
-
-- Inicio: presentación de la película y mapa de navegación.
-- Espacio 1: la casa, la familia y la identidad.
-- Espacio 2: las granjas, el conflicto y los antagonistas.
-- Espacio 3: el refugio, la cooperación y la supervivencia.
-- Espacio 4: los túneles, la escapatoria y la imaginación.
-- Espacio 5: el supermercado, los recursos y la abundancia.
-
-La página de las granjas contiene un video dedicado a Boggis, Bunce y Bean.
-
-## 4. Identidad visual
-
-La paleta se inspira en los colores cálidos y terrosos asociados al universo
-visual de la película.
-
-- Crema: #F4ECD9
-- Papel: #FFF8E9
-- Negro: #24261F
-- Naranja: #E85D2A
-- Rojo: #B93726
-- Mostaza: #F2BD3F
-- Verde oliva: #687A45
-- Azul grisáceo: #6B8990
-
-Se utilizan las tipografías Syne para los titulares, Space Grotesk para
-los textos y DM Mono para las etiquetas.
-
-## 5. Interactividad
-
-- Navegación mediante enlaces entre las páginas.
-- Reproductor de audio con selección de canciones.
-- Letras que cambian de color al pulsarlas.
-- Activación de la música mediante interacción del usuario.
-- Video con controles de reproducción.
-- Pausa de la música cuando comienza el video.
-- Diseño adaptable a dispositivos móviles.
-
-## 6. Estructura técnica
-
-- index.html
-- casa.html
-- granjas.html
-- refugio.html
-- tuneles.html
-- supermercado.html
-- css/estilo.css
-- interacciones.js
-- img/
-- audio/
-- video/
-
-## 7. Decisiones de diseño
-
-Se eligió una estructura editorial con titulares grandes, bloques de color,
-bordes marcados y tarjetas interactivas. La navegación permite tanto seguir
-el orden propuesto como volver al inicio y elegir otro espacio.
-
-La banda sonora contribuye a diferenciar la experiencia de cada lugar.
-
-## 8. Pruebas
-
-- [ ] Todas las imágenes cargan correctamente.
-- [ ] Todos los enlaces funcionan.
-- [ ] El audio se reproduce.
-- [ ] Las letras cambian de color.
-- [ ] El video de las granjas funciona.
-- [ ] La música se pausa al reproducir el video.
-- [ ] El diseño funciona en pantallas pequeñas.
-- [ ] El supermercado aparece como espacio 5.
-
-## 9. Observación
-
-Los nombres de los archivos y las rutas deben coincidir exactamente
-con los del repositorio. La reproducción de audio comienza tras una
-interacción del usuario, debido a las restricciones del navegador.
-
+## 5. Estructura Técnica de Archivos
+* `index.html`
+* `casa.html`
+* `granjas.html`
+* `refugio.html`
+* `tuneles.html`
+* `supermercado.html`
+* `css/estilo.css`
+* `interacciones.js`
+* Carpetas de recursos: `img/`, `audio/`, `video/`
