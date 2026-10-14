@@ -1,107 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La casa — FOX.FILES</title>
-    <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La casa | Fantastic Mr. Fox</title>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
+<body data-espacio="casa">
 
-<body>
-    <header class="navbar">
-        <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
+<header class="navbar">
+  <a class="logo" href="index.html">FANTASTIC<span>!</span></a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a class="activo" href="casa.html">La casa</a>
+    <a href="granjas.html">Las granjas</a>
+    <a href="refugio.html">El refugio</a>
+    <a href="tuneles.html">Los túneles</a>
+    <a href="supermercado.html">El supermercado</a>
+  </nav>
+</header>
 
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="casa.html" class="activo">La casa</a>
-            <a href="granjas.html">Las granjas</a>
-            <a href="refugio.html">El refugio</a>
-            <a href="supermercado.html">El súper</a>
-            <a href="tuneles.html">Los túneles</a>
-        </nav>
+<section class="reproductor">
+  <span>♫ BANDA SONORA</span>
+  <select id="selectorCancion">
+    <option value="audio/ambiente.mp3">Ambiente general</option>
+    <option value="audio/casa.mp3">La casa</option>
+    <option value="audio/granjas.mp3">Las granjas</option>
+    <option value="audio/tuneles.mp3">Los túneles</option>
+    <option value="audio/supermercado.mp3">El supermercado</option>
+  </select>
+  <button id="botonSonido" class="boton-sonido">♫ REPRODUCIR</button>
+</section>
 
-        <button class="boton-sonido" id="botonSonido">
-            ♫ ACTIVAR SONIDO
-        </button>
-    </header>
+<audio id="musica" preload="none" loop></audio>
 
-    <audio id="musica" src="audio/ambiente.mp3" loop></audio>
+<main class="pagina-espacio">
+  <section class="cabecera-espacio">
+    <div>
+      <p class="etiqueta">ESPACIO 01 / EL HOGAR</p>
+      <h1>UN HOGAR<br>CON COLMILLOS<span class="acento">.</span></h1>
+      <p class="descripcion">
+        Un hogar cálido, una familia y un zorro que intenta encontrar
+        el equilibrio entre la responsabilidad y sus ganas de vivir aventuras.
+      </p>
+      <a href="#contenido" class="boton-principal">EXPLORAR LA CASA ↓</a>
+    </div>
+    <div class="marco">
+      <img src="img/casa.jpg" alt="La casa de los Fox">
+    </div>
+  </section>
 
-    <main class="pagina-espacio">
-        <section class="cabecera-espacio">
-            <div>
-                <p class="etiqueta">ESPACIO 01 / EL HOGAR</p>
+  <section class="texto-espacio section-wrap" id="contenido">
+    <p class="etiqueta">DENTRO DE LA HISTORIA</p>
+    <p>
+      La casa de los Fox representa el lado íntimo de la película.
+      Aquí aparecen la familia, las rutinas y el deseo de construir
+      una vida estable. Sin embargo, el señor Fox siente que la tranquilidad
+      no es suficiente y quiere recuperar su espíritu aventurero.
+    </p>
 
-                <h1>UN HOGAR<br>CON COLMILLOS.</h1>
+    <blockquote class="cita">
+      ¿Podemos cambiar sin dejar de ser quienes somos?
+    </blockquote>
 
-                <p class="descripcion">
-                    Un hogar cálido, una familia y un zorro que intenta
-                    encontrar el equilibrio entre la responsabilidad
-                    y sus ganas de vivir aventuras.
-                </p>
+    <p>
+      Los colores cálidos y los objetos cuidadosamente organizados
+      convierten este espacio en un lugar acogedor. El contraste entre
+      el hogar y las aventuras del protagonista ayuda a entender el conflicto
+      entre sus responsabilidades y sus deseos.
+    </p>
 
-                <a href="#contenido" class="boton-principal">
-                    DESCUBRIR ESTE LUGAR ↘
-                </a>
-            </div>
+    <div class="nota">
+      <strong>PISTA INTERACTIVA ✳</strong>
+      <p>
+        Pulsa las letras para cambiar sus colores y activar el sonido.
+        Después continúa hacia las granjas.
+      </p>
+    </div>
 
-            <div class="imagen-espacio marco">
-                <img src="img/casa.jpg" alt="La casa de los Fox">
-            </div>
-        </section>
+    <div class="letras-interactivas">
+      <button>H</button><button>O</button><button>G</button><button>A</button><button>R</button>
+    </div>
+  </section>
 
-        <section id="contenido" class="texto-espacio">
-            <p class="etiqueta">DENTRO DE LA HISTORIA</p>
+  <nav class="navegacion-espacios">
+    <a href="index.html">← Inicio</a>
+    <a href="granjas.html">Siguiente espacio →</a>
+  </nav>
+</main>
 
-            <p>
-                La casa de los Fox representa el lado más íntimo de la
-                película. Aquí aparecen la familia, las rutinas y el
-                deseo de construir una vida estable. Sin embargo,
-                el señor Fox siente que la tranquilidad no es suficiente.
-            </p>
+<footer class="pie">
+  <p>Un recorrido por el universo de <em>Fantastic Mr. Fox</em>.</p>
+  <a href="documentos.md">DOCUMENTACIÓN ↗</a>
+  <a href="index.html">VOLVER AL INICIO ↑</a>
+</footer>
 
-            <blockquote class="cita">
-                ¿Podemos cambiar sin dejar de ser quienes somos?
-            </blockquote>
-
-            <p>
-                Los colores cálidos y los objetos cuidadosamente
-                organizados convierten este espacio en un lugar acogedor.
-                El contraste entre el hogar y el espíritu aventurero del
-                protagonista ayuda a entender el conflicto de la historia.
-            </p>
-
-            <div class="nota">
-                <strong>PISTA INTERACTIVA ✳</strong>
-                <p>
-                    Toca las letras para cambiar sus colores y activar
-                    el sonido ambiental. También puedes explorar otros
-                    espacios sin perder el camino de regreso.
-                </p>
-            </div>
-
-            <p class="etiqueta">JUEGA CON LAS LETRAS</p>
-
-            <div class="letras-interactivas">
-                <button type="button">F</button>
-                <button type="button">O</button>
-                <button type="button">X</button>
-                <button type="button">!</button>
-            </div>
-        </section>
-
-        <nav class="navegacion-espacios">
-            <a href="index.html">← Volver al inicio</a>
-            <a href="granjas.html">Siguiente espacio →</a>
-        </nav>
-    </main>
-
-    <footer class="pie">
-        <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
-        <p>Un universo de tierra, naranja y aventura.</p>
-        <a href="index.html">VOLVER A CASA ↑</a>
-    </footer>
-
-    <script src="js/interacciones.js"></script>
+<script src="interacciones.js"></script>
 </body>
 </html>
+

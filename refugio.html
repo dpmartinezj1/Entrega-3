@@ -1,82 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El refugio — FOX.FILES</title>
-    <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El refugio | Fantastic Mr. Fox</title>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body data-espacio="refugio">
+
 <header class="navbar">
-    <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
-    <nav>
-        <a href="index.html">Inicio</a><a href="casa.html">La casa</a>
-        <a href="granjas.html">Las granjas</a>
-        <a href="refugio.html" class="activo">El refugio</a>
-        <a href="supermercado.html">El súper</a><a href="tuneles.html">Los túneles</a>
-    </nav>
-    <button class="boton-sonido" id="botonSonido">♫ ACTIVAR SONIDO</button>
+  <a class="logo" href="index.html">FANTASTIC<span>!</span></a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="casa.html">La casa</a>
+    <a href="granjas.html">Las granjas</a>
+    <a class="activo" href="refugio.html">El refugio</a>
+    <a href="tuneles.html">Los túneles</a>
+    <a href="supermercado.html">El supermercado</a>
+  </nav>
 </header>
-<audio id="musica" src="audio/ambiente.mp3" loop></audio>
+
+<section class="reproductor">
+  <span>♫ BANDA SONORA</span>
+  <select id="selectorCancion">
+    <option value="audio/ambiente.mp3">Ambiente general</option>
+    <option value="audio/casa.mp3">La casa</option>
+    <option value="audio/granjas.mp3">Las granjas</option>
+    <option value="audio/tuneles.mp3">Los túneles</option>
+    <option value="audio/supermercado.mp3">El supermercado</option>
+  </select>
+  <button id="botonSonido" class="boton-sonido">♫ REPRODUCIR</button>
+</section>
+
+<audio id="musica" preload="none" loop></audio>
 
 <main class="pagina-espacio">
-    <section class="cabecera-espacio">
-        <div>
-            <p class="etiqueta">ESPACIO 03 / LA COMUNIDAD</p>
-            <h1>BAJO TIERRA,<br>JUNTOS.</h1>
-            <p class="descripcion">
-                Cuando el mundo de arriba se vuelve peligroso,
-                el refugio se convierte en un lugar para cooperar,
-                resistir y comenzar de nuevo.
-            </p>
-            <a href="#contenido" class="boton-principal">DESCENDER ↘</a>
-        </div>
-        <div class="imagen-espacio marco">
-            <img src="img/refugio.jpg" alt="El refugio subterráneo">
-        </div>
-    </section>
+  <section class="cabecera-espacio">
+    <div>
+      <p class="etiqueta">ESPACIO 03 / LA COMUNIDAD</p>
+      <h1>BAJO TIERRA,<br>JUNTOS<span class="acento">.</span></h1>
+      <p class="descripcion">
+        Cuando el mundo de arriba se vuelve peligroso, el refugio
+        se convierte en un lugar para cooperar y sobrevivir.
+      </p>
+      <a href="#contenido" class="boton-principal">ENTRAR AL REFUGIO ↓</a>
+    </div>
+    <div class="marco">
+      <img src="img/refugio.jpg" alt="El refugio subterráneo">
+    </div>
+  </section>
 
-    <section id="contenido" class="texto-espacio">
-        <p class="etiqueta">DENTRO DE LA HISTORIA</p>
-        <p>
-            Los espacios subterráneos ofrecen protección frente a la
-            persecución. Allí los personajes deben compartir recursos,
-            ayudarse y encontrar soluciones que no dependan solamente
-            de la fuerza individual.
-        </p>
-        <blockquote class="cita">
-            Sobrevivir es más fácil cuando nadie se queda atrás.
-        </blockquote>
-        <p>
-            El refugio transforma la idea de hogar: ya no se trata
-            solamente de una familia, sino de una comunidad que aprende
-            a convivir en circunstancias difíciles.
-        </p>
-        <div class="nota">
-            <strong>PISTA INTERACTIVA ✳</strong>
-            Piensa en cómo un escondite puede convertirse en hogar.
-            Toca las letras y explora los demás espacios del recorrido.
-        </div>
-        <p class="etiqueta">ACTIVA LAS LETRAS</p>
-        <div class="letras-interactivas">
-            <button type="button">A</button><button type="button">B</button>
-            <button type="button">A</button><button type="button">J</button>
-            <button type="button">O</button>
-        </div>
-    </section>
+  <section class="texto-espacio section-wrap" id="contenido">
+    <p class="etiqueta">DENTRO DE LA HISTORIA</p>
+    <p>
+      Los espacios subterráneos ofrecen protección frente a la persecución.
+      Allí los personajes deben compartir recursos, ayudarse y encontrar
+      soluciones que no dependan solamente de la fuerza individual.
+    </p>
 
-    <nav class="navegacion-espacios">
-        <a href="granjas.html">← Las granjas</a>
-        <a href="index.html">⌂ Inicio</a>
-        <a href="supermercado.html">Siguiente espacio →</a>
-    </nav>
+    <blockquote class="cita">
+      Sobrevivir es más fácil cuando nadie se queda atrás.
+    </blockquote>
+
+    <p>
+      El refugio transforma la idea de hogar: ya no se trata solamente
+      de una familia, sino de una comunidad que aprende a convivir
+      en circunstancias difíciles.
+    </p>
+
+    <div class="nota">
+      <strong>PISTA INTERACTIVA ✳</strong>
+      <p>
+        Piensa en cómo un escondite puede convertirse en hogar.
+        Explora los otros espacios para descubrir nuevas rutas.
+      </p>
+    </div>
+
+    <div class="letras-interactivas">
+      <button>A</button><button>B</button><button>A</button><button>J</button><button>O</button>
+    </div>
+  </section>
+
+  <nav class="navegacion-espacios">
+    <a href="granjas.html">← Las granjas</a>
+    <a href="tuneles.html">Siguiente espacio →</a>
+  </nav>
 </main>
 
 <footer class="pie">
-    <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
-    <p>Espacio 03 / El refugio</p>
-    <a href="index.html">VOLVER A CASA ↑</a>
+  <p>Un recorrido por el universo de <em>Fantastic Mr. Fox</em>.</p>
+  <a href="documentos.md">DOCUMENTACIÓN ↗</a>
+  <a href="index.html">VOLVER AL INICIO ↑</a>
 </footer>
-<script src="js/interacciones.js"></script>
+
+<script src="interacciones.js"></script>
 </body>
 </html>
+

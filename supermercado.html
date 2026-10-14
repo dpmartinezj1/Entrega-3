@@ -1,81 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El supermercado — FOX.FILES</title>
-    <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>El supermercado | Fantastic Mr. Fox</title>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body data-espacio="supermercado">
+
 <header class="navbar">
-    <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
-    <nav>
-        <a href="index.html">Inicio</a><a href="casa.html">La casa</a>
-        <a href="granjas.html">Las granjas</a><a href="refugio.html">El refugio</a>
-        <a href="supermercado.html" class="activo">El súper</a>
-        <a href="tuneles.html">Los túneles</a>
-    </nav>
-    <button class="boton-sonido" id="botonSonido">♫ ACTIVAR SONIDO</button>
+  <a class="logo" href="index.html">FANTASTIC<span>!</span></a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="casa.html">La casa</a>
+    <a href="granjas.html">Las granjas</a>
+    <a href="refugio.html">El refugio</a>
+    <a href="tuneles.html">Los túneles</a>
+    <a class="activo" href="supermercado.html">El supermercado</a>
+  </nav>
 </header>
-<audio id="musica" src="audio/ambiente.mp3" loop></audio>
+
+<section class="reproductor">
+  <span>♫ BANDA SONORA</span>
+  <select id="selectorCancion">
+    <option value="audio/ambiente.mp3">Ambiente general</option>
+    <option value="audio/casa.mp3">La casa</option>
+    <option value="audio/granjas.mp3">Las granjas</option>
+    <option value="audio/tuneles.mp3">Los túneles</option>
+    <option value="audio/supermercado.mp3">El supermercado</option>
+  </select>
+  <button id="botonSonido" class="boton-sonido">♫ REPRODUCIR</button>
+</section>
+
+<audio id="musica" preload="none" loop></audio>
 
 <main class="pagina-espacio">
-    <section class="cabecera-espacio">
-        <div>
-            <p class="etiqueta">ESPACIO 04 / LA ABUNDANCIA</p>
-            <h1>EL PARAÍSO<br>DE LOS ANTOJOS.</h1>
-            <p class="descripcion">
-                Pasillos, comida y oportunidades. En este lugar,
-                cada producto puede convertirse en un premio
-                o en parte de un plan secreto.
-            </p>
-            <a href="#contenido" class="boton-principal">BUSCAR PROVISIONES ↘</a>
-        </div>
-        <div class="imagen-espacio marco">
-            <img src="img/supermercado.jpg" alt="El supermercado">
-        </div>
-    </section>
+  <section class="cabecera-espacio">
+    <div>
+      <p class="etiqueta">ESPACIO 05 / LA ABUNDANCIA</p>
+      <h1>EL PARAÍSO<br>DE LOS ANTOJOS<span class="acento">.</span></h1>
+      <p class="descripcion">
+        Pasillos, comida y oportunidades. Cada producto puede convertirse
+        en un premio o en parte de un plan secreto.
+      </p>
+      <a href="#contenido" class="boton-principal">ENTRAR AL SUPERMERCADO ↓</a>
+    </div>
+    <div class="marco">
+      <img src="img/supermercado.jpg" alt="El supermercado">
+    </div>
+  </section>
 
-    <section id="contenido" class="texto-espacio">
-        <p class="etiqueta">DENTRO DE LA HISTORIA</p>
-        <p>
-            La comida impulsa muchas de las decisiones del señor Fox.
-            El supermercado simboliza la abundancia y el acceso a
-            recursos que los personajes desean conseguir.
-        </p>
-        <blockquote class="cita">
-            El verdadero botín es tener suficiente para compartir.
-        </blockquote>
-        <p>
-            Este espacio también permite reflexionar sobre la diferencia
-            entre tener recursos y poder acceder a ellos. La aventura
-            convierte un lugar cotidiano en un escenario lleno de
-            posibilidades y riesgos.
-        </p>
-        <div class="nota">
-            <strong>PISTA INTERACTIVA ✳</strong>
-            Imagina que cada pasillo es una ruta de una misión.
-            Pulsa las letras para activar el audio y continúa el recorrido.
-        </div>
-        <p class="etiqueta">ACTIVA LAS LETRAS</p>
-        <div class="letras-interactivas">
-            <button type="button">Y</button><button type="button">U</button>
-            <button type="button">M</button><button type="button">!</button>
-        </div>
-    </section>
+  <section class="texto-espacio section-wrap" id="contenido">
+    <p class="etiqueta">DENTRO DE LA HISTORIA</p>
+    <p>
+      La comida impulsa muchas de las decisiones del señor Fox.
+      El supermercado simboliza la abundancia y el acceso a recursos
+      que los personajes desean conseguir.
+    </p>
 
-    <nav class="navegacion-espacios">
-        <a href="refugio.html">← El refugio</a>
-        <a href="index.html">⌂ Inicio</a>
-        <a href="tuneles.html">Siguiente espacio →</a>
-    </nav>
+    <blockquote class="cita">
+      El verdadero botín es tener suficiente para compartir.
+    </blockquote>
+
+    <p>
+      Este espacio permite reflexionar sobre la diferencia entre tener
+      recursos y poder acceder a ellos. La aventura convierte un lugar
+      cotidiano en un escenario lleno de posibilidades y riesgos.
+    </p>
+
+    <div class="nota">
+      <strong>FIN DEL RECORRIDO ✳</strong>
+      <p>
+        Has llegado al quinto espacio. Puedes volver al inicio para explorar
+        otra vez el universo de la película.
+      </p>
+    </div>
+
+    <div class="letras-interactivas">
+      <button>Y</button><button>U</button><button>M</button><button>!</button>
+    </div>
+  </section>
+
+  <nav class="navegacion-espacios">
+    <a href="tuneles.html">← Los túneles</a>
+    <a href="index.html">⌂ Volver al inicio</a>
+  </nav>
 </main>
 
 <footer class="pie">
-    <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
-    <p>Espacio 04 / El supermercado</p>
-    <a href="index.html">VOLVER A CASA ↑</a>
+  <p>Un recorrido por el universo de <em>Fantastic Mr. Fox</em>.</p>
+  <a href="documentos.md">DOCUMENTACIÓN ↗</a>
+  <a href="index.html">VOLVER AL INICIO ↑</a>
 </footer>
-<script src="js/interacciones.js"></script>
+
+<script src="interacciones.js"></script>
 </body>
 </html>

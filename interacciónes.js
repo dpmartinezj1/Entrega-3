@@ -1,106 +1,107 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    const musica = document.getElementById("musica");
-    const botonSonido = document.getElementById("botonSonido");
-    const selector = document.getElementById("selectorCancion");
+  const audio = document.getElementById("musica");
+  const button = document.getElementById("botonSonido");
+  const select = document.getElementById("selectorCancion");
 
-    const audios = {
-        inicio: "audio/ambiente.mp3",
-        casa: "audio/casa.mp3",
-        granjas: "audio/granjas.mp3",
-        refugio: "audio/ambiente.mp3",
-        supermercado: "audio/supermercado.mp3",
-        tuneles: "audio/tuneles.mp3"
-    };
+  const espacio = document.body.dataset.espacio || "inicio";
 
-    const espacio = document.body.dataset.espacio || "inicio";
-    const audioInicial = audios[espacio] || audios.inicio;
+  const canciones = {
+    inicio: "audio/ambiente.mp3",
+    casa: "audio/casa.mp3",
+    granjas: "audio/granjas.mp3",
+    refugio: "audio/ambiente.mp3",
+    tuneles: "audio/tuneles.mp3",
+    supermercado: "audio/supermercado.mp3"
+  };
 
-    if (musica) {
-        musica.src = audioInicial;
-        musica.loop = true;
-        musica.volume = 0.4;
-        musica.load();
+  function actualizarBoton() {
+    if (!button || !audio) return;
 
-        if (selector) {
-            selector.value = audioInicial;
+    button.textContent = audio.paused
+      ? "♫ REPRODUCIR"
+      : "♫ PAUSAR";
+  }
 
-            selector.addEventListener("change", async () => {
-                musica.src = selector.value;
-                musica.load();
+  async function reproducir() {
+    try {
+      await audio.play();
+      actualizarBoton();
+    } catch (error) {
+      console.error("No se pudo reproducir el audio:", error);
 
-                try {
-                    await musica.play();
-                    if (botonSonido) {
-                        botonSonido.textContent = "♫ PAUSAR";
-                    }
-                } catch (error) {
-                    if (botonSonido) {
-                        botonSonido.textContent = "♫ REPRODUCIR";
-                    }
-                }
-            });
-        }
+      if (button) {
+        button.textContent = "REVISAR AUDIO";
+      }
+    }
+  }
 
-        if (botonSonido) {
-            botonSonido.addEventListener("click", async () => {
-                if (musica.paused) {
-                    try {
-                        await musica.play();
-                        botonSonido.textContent = "♫ PAUSAR";
-                    } catch (error) {
-                        console.error("No se pudo reproducir el audio:", error);
-                        botonSonido.textContent = "ERROR DE AUDIO";
-                    }
-                } else {
-                    musica.pause();
-                    botonSonido.textContent = "♫ REPRODUCIR";
-                }
-            });
-        }
+  if (audio) {
+    const cancionInicial = canciones[espacio] || canciones.inicio;
+
+    audio.src = cancionInicial;
+    audio.loop = true;
+    audio.volume = 0.4;
+    audio.load();
+
+    if (select) {
+      select.value = cancionInicial;
+
+      select.addEventListener("change", () => {
+        audio.src = select.value;
+        audio.load();
+        reproducir();
+      });
     }
 
-    // Letras interactivas
-    const letras = document.querySelectorAll(
-        ".letra, .letras-interactivas button"
-    );
+    if (button) {
+      button.addEventListener("click", () => {
+        if (audio.paused) {
+          reproducir();
+        } else {
+          audio.pause();
+          actualizarBoton();
+        }
+      });
+    }
 
-    const colores = [
-        "#e85d2a",
-        "#687a45",
-        "#f2bd3f",
-        "#6b8990",
-        "#b93726",
-        "#24261f"
-    ];
+    audio.addEventListener("play", actualizarBoton);
+    audio.addEventListener("pause", actualizarBoton);
 
-    letras.forEach((letra, indice) => {
-        letra.addEventListener("click", async () => {
-            letra.style.color = colores[indice % colores.length];
-            letra.classList.toggle("activa");
+    audio.addEventListener("error", () => {
+      console.error("No se encuentra el archivo:", audio.currentSrc);
 
-            if (musica && musica.paused) {
-                try {
-                    await musica.play();
-                    if (botonSonido) {
-                        botonSonido.textContent = "♫ PAUSAR";
-                    }
-                } catch (error) {
-                    console.log("Pulsa el botón para activar el sonido.");
-                }
-            }
-        });
+      if (button) {
+        button.textContent = "REVISAR ARCHIVO";
+      }
     });
+  }
 
-    // El video pausa la música para escuchar la explicación.
-    const video = document.querySelector(".video-granjas");
+  const colores = [
+    "#e85d2a",
+    "#687a45",
+    "#f2bd3f",
+    "#6b8990",
+    "#b93726",
+    "#24261f"
+  ];
 
-    if (video) {
-        video.addEventListener("play", () => {
-            if (musica) musica.pause();
-            if (botonSonido) {
-                botonSonido.textContent = "♫ REPRODUCIR";
-            }
-        });
-    }
+  document.querySelectorAll(".letras-interactivas button").forEach((letra, i) => {
+    letra.addEventListener("click", () => {
+      letra.style.color = colores[i % colores.length];
+      letra.classList.toggle("activa");
+
+      if (audio && audio.paused) {
+        reproducir();
+      }
+    });
+  });
+
+  const video = document.querySelector(".video-granjas");
+
+  if (video && audio) {
+    video.addEventListener("play", () => {
+      audio.pause();
+      actualizarBoton();
+    });
+  }
 });

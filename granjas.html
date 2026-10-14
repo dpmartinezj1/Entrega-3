@@ -1,83 +1,137 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Las granjas — FOX.FILES</title>
-    <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Las granjas | Fantastic Mr. Fox</title>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body data-espacio="granjas">
+
 <header class="navbar">
-    <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
-    <nav>
-        <a href="index.html">Inicio</a><a href="casa.html">La casa</a>
-        <a href="granjas.html" class="activo">Las granjas</a>
-        <a href="refugio.html">El refugio</a>
-        <a href="supermercado.html">El súper</a><a href="tuneles.html">Los túneles</a>
-    </nav>
-    <button class="boton-sonido" id="botonSonido">♫ ACTIVAR SONIDO</button>
+  <a class="logo" href="index.html">FANTASTIC<span>!</span></a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="casa.html">La casa</a>
+    <a class="activo" href="granjas.html">Las granjas</a>
+    <a href="refugio.html">El refugio</a>
+    <a href="tuneles.html">Los túneles</a>
+    <a href="supermercado.html">El supermercado</a>
+  </nav>
 </header>
-<audio id="musica" src="audio/ambiente.mp3" loop></audio>
+
+<section class="reproductor">
+  <span>♫ BANDA SONORA</span>
+  <select id="selectorCancion">
+    <option value="audio/ambiente.mp3">Ambiente general</option>
+    <option value="audio/casa.mp3">La casa</option>
+    <option value="audio/granjas.mp3">Las granjas</option>
+    <option value="audio/tuneles.mp3">Los túneles</option>
+    <option value="audio/supermercado.mp3">El supermercado</option>
+  </select>
+  <button id="botonSonido" class="boton-sonido">♫ REPRODUCIR</button>
+</section>
+
+<audio id="musica" preload="none" loop></audio>
 
 <main class="pagina-espacio">
-    <section class="cabecera-espacio">
-        <div>
-            <p class="etiqueta">ESPACIO 02 / EL CONFLICTO</p>
-            <h1>TRES GRANJEROS.<br>CERO PACIENCIA.</h1>
-            <p class="descripcion">
-                Boggis, Bunce y Bean tienen recursos, territorio y un
-                objetivo: atrapar al zorro que amenaza su tranquilidad.
-            </p>
-            <a href="#contenido" class="boton-principal">ENTRAR EN TERRITORIO ENEMIGO ↘</a>
-        </div>
-        <div class="imagen-espacio marco">
-            <img src="img/granjas.jpg" alt="Las granjas de la película">
-        </div>
-    </section>
+  <section class="cabecera-espacio">
+    <div>
+      <p class="etiqueta">ESPACIO 02 / EL CONFLICTO</p>
+      <h1>TRES GRANJEROS.<br>CERO PACIENCIA<span class="acento">.</span></h1>
+      <p class="descripcion">
+        Boggis, Bunce y Bean tienen recursos, territorio y un objetivo:
+        atrapar al zorro que amenaza su tranquilidad.
+      </p>
+      <a href="#granjeros" class="boton-principal">CONOCER A LOS GRANJEROS ↓</a>
+    </div>
+    <div class="marco">
+      <img src="img/granjas.jpg" alt="Las granjas de la película">
+    </div>
+  </section>
 
-    <section id="contenido" class="texto-espacio">
-        <p class="etiqueta">DENTRO DE LA HISTORIA</p>
-        <p>
-            Las granjas representan el poder, la propiedad y el deseo de
-            controlar el entorno. Sus dueños ven al señor Fox como una
-            amenaza y responden con una persecución que afecta a toda
-            la comunidad animal.
-        </p>
-        <blockquote class="cita">
-            Cuando el control se vuelve obsesión, todo parece una amenaza.
-        </blockquote>
-        <p>
-            Frente al bosque y sus caminos impredecibles, las granjas
-            muestran un mundo organizado alrededor de la producción y
-            la posesión. Este contraste refuerza el conflicto entre
-            los animales y los seres humanos.
-        </p>
-        <div class="nota">
-            <strong>PISTA INTERACTIVA ✳</strong>
-            Observa el contraste entre los espacios abiertos del bosque
-            y los límites impuestos por las granjas. Pulsa las letras
-            para cambiar sus colores y activar el audio.
-        </div>
-        <p class="etiqueta">ACTIVA LAS LETRAS</p>
-        <div class="letras-interactivas">
-            <button type="button">T</button><button type="button">R</button>
-            <button type="button">A</button><button type="button">M</button>
-            <button type="button">P</button><button type="button">A</button>
-        </div>
-    </section>
+  <section class="video-seccion" id="granjeros">
+    <p class="etiqueta">ARCHIVO AUDIOVISUAL / 01</p>
+    <h2>LOS TRES GRANJEROS<span class="acento">.</span></h2>
+    <p>
+      Conoce a los tres dueños que persiguen al señor Fox y descubre
+      qué produce cada uno y por qué participan en el conflicto.
+    </p>
 
-    <nav class="navegacion-espacios">
-        <a href="casa.html">← La casa</a>
-        <a href="index.html">⌂ Inicio</a>
-        <a href="refugio.html">Siguiente espacio →</a>
-    </nav>
+    <div class="video-marco">
+      <video class="video-granjas" controls preload="metadata" playsinline>
+        <source src="video/BoggisBunceandBeangranjas.mp4" type="video/mp4">
+        Tu navegador no puede reproducir este video.
+      </video>
+    </div>
+
+    <p class="video-pie">ARCHIVO AUDIOVISUAL / LOS GRANJEROS</p>
+
+    <div class="granjeros-grid">
+      <article class="granjero">
+        <small>01 / POLLOS</small>
+        <h3>Boggis</h3>
+        <p>
+          Es un granjero rico y corpulento que produce pollos.
+          Participa en la persecución para proteger sus animales y recursos.
+        </p>
+      </article>
+
+      <article class="granjero">
+        <small>02 / PATOS Y GANSOS</small>
+        <h3>Bunce</h3>
+        <p>
+          Es un granjero bajo que cría patos y gansos.
+          Se une a la persecución para defender sus animales y provisiones.
+        </p>
+      </article>
+
+      <article class="granjero">
+        <small>03 / PAVOS Y SIDRA</small>
+        <h3>Bean</h3>
+        <p>
+          Es un granjero calculador relacionado con los pavos y la sidra.
+          Es persistente y participa en los planes para atrapar al señor Fox.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="texto-espacio section-wrap" id="contenido">
+    <p class="etiqueta">DENTRO DE LA HISTORIA</p>
+    <p>
+      Las granjas representan el poder, la propiedad y el deseo de controlar
+      el entorno. Sus dueños ven al señor Fox como una amenaza y responden
+      con una persecución que afecta a toda la comunidad animal.
+    </p>
+
+    <blockquote class="cita">
+      Cuando el control se vuelve obsesión, todo parece una amenaza.
+    </blockquote>
+
+    <p>
+      Frente al bosque y sus caminos impredecibles, las granjas muestran
+      un mundo organizado alrededor de la producción y la posesión.
+      Este contraste refuerza el conflicto entre los animales y los humanos.
+    </p>
+
+    <div class="letras-interactivas">
+      <button>T</button><button>R</button><button>A</button><button>M</button><button>P</button><button>A</button>
+    </div>
+  </section>
+
+  <nav class="navegacion-espacios">
+    <a href="casa.html">← La casa</a>
+    <a href="refugio.html">Siguiente espacio →</a>
+  </nav>
 </main>
 
 <footer class="pie">
-    <a href="index.html" class="logo">FOX<span>.</span>FILES</a>
-    <p>Espacio 02 / Las granjas</p>
-    <a href="index.html">VOLVER A CASA ↑</a>
+  <p>Un recorrido por el universo de <em>Fantastic Mr. Fox</em>.</p>
+  <a href="documentos.md">DOCUMENTACIÓN ↗</a>
+  <a href="index.html">VOLVER AL INICIO ↑</a>
 </footer>
-<script src="js/interacciones.js"></script>
+
+<script src="interacciones.js"></script>
 </body>
 </html>
